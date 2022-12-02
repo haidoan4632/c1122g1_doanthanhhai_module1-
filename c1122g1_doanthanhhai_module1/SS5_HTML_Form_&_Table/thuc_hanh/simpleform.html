@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo form cơ bản</title>
+</head>
+<style>
+    div{
+        border: 5px dashed aqua;
+        width: 600px;
+
+    }
+    h2, h3, p {
+       margin: 10px;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Tahoma", sans-serif;
+    }
+    input, select {
+        margin-left: 10px;
+    }
+</style>
+<body>
+<div>
+<form action="google.com" method="get">
+    <h2>Order Form</h2>
+    <h3> What would you like to buy?</h3>
+    <select name="food">
+        <option value="a">apple (+ 10$)</option>
+        <option value="b">banana (+ 9$)</option>
+        <option value="c">orange (+8 $)</option>
+    </select>
+    <h3>How many would you like to order?</h3>
+    <lable><input name="1" type="radio"> 1 - $10</lable>
+    <br>
+    <lable><input name="1" type="radio"> 2 - $20</lable>
+    <br>
+    <lable><input name="1" type="radio"> 3 - $25</lable>
+    <br>
+<h3> Name <span style="color: #ff0000">*</span></h3>
+    <lable><input type="text" placeholder="FirstName"></lable>
+    <lable><input type="text" placeholder="LastName"></lable>
+    <br>
+<h3>Email</h3>
+    <lable><input type="text" placeholder="nhập email của bạn"size="47"></lable>
+<h3>Phone Number</h3>
+    <lable><input placeholder="4 số đầu" type="number" name="phone 1"></lable> -
+    <lable><input placeholder="3 số sau" type="number" name="phone 2"></lable> -
+    <lable><input placeholder="3 số cuối" type="number"name="phone 3"></lable>
+    <br>
+    <br>
+<lable><input name="submit" type="button" type="submit" value="submit"></lable>
+</form>
+</div>
+</body>
+</html>
