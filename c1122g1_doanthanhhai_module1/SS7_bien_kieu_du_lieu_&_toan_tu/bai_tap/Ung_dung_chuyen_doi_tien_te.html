@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-$END$
+    <table>
+        <tr>
+            <th> Amount</th>
+            <th> From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th><input type="number" min="0" id="Amount" placeholder="nhap vao gia tri tien te can chuyen doi"></th>
+            <th>
+                <select name="From Currency" id="From">
+                    <option value="VND">VietNam</option>
+                    ;
+                    <option value="USD">USD</option>
+                    ;
+                </select>
+            </th>
+            <th>
+                <select name="To Currency" id="To">
+                    <option value="VND">VietNam</option>
+                    ;
+                    <option value="USD">USD</option>
+                    ;
+                </select>
+            </th>
+            <th><input type="button" value="Convert"  onclick="changeMoney()"></th>
+        </tr>
+    </table>
+    <p id="Result"> </p>
+
+<script>
+    function changeMoney() {
+        let amount = document.getElementById("Amount").value;
+        let from = document.getElementById("From").value;
+        let toCurrency = document.getElementById("To").value;
+        let result;
+        if (from === "VND" && toCurrency === "USD") {
+            result = "Result: " + (amount / 23000) + " $";
+        } else if (from === "USD" && toCurrency === "VND") {
+            result = "Result: " + (amount * 23000) + " Đ";
+        } else if (from === "VND" && toCurrency === "VND") {
+            result = "Result: " + amount + ' Đ';
+        } else if (from === "USD" && toCurrency === "USD") {
+            result = "Result: " + amount + ' $';
+        }
+        document.getElementById("Result").innerHTML = result;
+
+    }
+</script>
 </body>
 </html>
+
+

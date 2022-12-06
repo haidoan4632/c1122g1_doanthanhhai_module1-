@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>hiển thị kết quả sử dụng thẻ HTML</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="showMessage();">Click Me!</button>
+
+<script>
+
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+    }
+</script>
 </body>
 </html>

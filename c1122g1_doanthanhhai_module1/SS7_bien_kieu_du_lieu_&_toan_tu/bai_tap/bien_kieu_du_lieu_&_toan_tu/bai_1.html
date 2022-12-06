@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai 1</title>
 </head>
 <body>
-$END$
+<script>
+    let ly= +prompt('nhập điểm lý');
+    let hoa =+prompt('nhập điểm hóa');
+    let sinh =+prompt('nhập điểm sinh');
+    if(( ly>=0&&ly<=10)&&(hoa>=0&&hoa<=10)&&(sinh>=0&&sinh<=10)){
+        let avg = (ly + hoa + sinh)/3;
+        alert(avg);
+    } else {
+        alert('nhập sai giá trị')
+    }
+</script>
 </body>
 </html>
