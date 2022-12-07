@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai12</title>
+</head>
+<body>
+<label for="tienvay">Nhập vào số tiền vay gốc</label>
+<input type="number" id="tienvay">  <br><br>
+
+
+<label for="thangvay">Nhập vào số tháng cho vay</label>
+<input type="number" id="thangvay"  ><br><br>
+
+
+<tr>
+    <td><button onclick="kiem_tra()">Hiển thị </button> </td>
+    <br>
+    <p id="4"></p>
+    <script>
+        function kiem_tra() {
+            let tienVay = +document.getElementById("tienvay").value;
+            let thangVay = +document.getElementById("thangvay").value;
+            let tongTra;
+            if (thangVay == 1) {
+                tongTra = tienVay * 0.0069 + tienVay;
+                alert('số tiền phải trả cả gốc lẫn lãi trong một tháng: ' + tongTra + 'triệu đồng')
+            } else if (thangVay == 2) {
+                tongTra = tienVay * 0.0071 + tienVay / thangVay;
+                alert('số tiền phải trả cả gốc lẫn lãi trong một tháng: ' + tongTra + 'triệu đồng')
+            } else if (thangVay >= 3) {
+                tongTra = tienVay * 0.009 + tienVay / thangVay;
+                alert('số tiền phải trả cả gốc lẫn lãi trong một tháng: ' + tongTra + 'triệu đồng')
+            }
+
+
+            document.getElementById("4").innerHTML = tongTra * thangVay;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

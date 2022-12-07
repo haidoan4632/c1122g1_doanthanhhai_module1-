@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 11</title>
+</head>
+<body>
+<h4>Viết chương trình tính thuế thu nhập cá nhân</h4>
+<script>
+    let thuNhap = +prompt('Nhập vào thu nhập của bạn');
+    let thueThuNhap;
+    if(thuNhap <=5){
+        thueThuNhap = thuNhap*5/100;
+    }
+    else if(thuNhap>5&&thuNhap<=10){
+        thueThuNhap =thuNhap*10/100-0.25;
+    }
+    else if(thuNhap>10&&thuNhap<=18){
+        thueThuNhap =thuNhap*15/100-0.75;
+    }
+    else if(thuNhap>18&&thuNhap<=32){
+        thueThuNhap =thuNhap*20/100-1.65;
+    }
+    else if(thuNhap>32&&thuNhap<=52){
+        thueThuNhap =thuNhap*25/100-3.25;
+    }
+    else if(thuNhap>52&&thuNhap<=80){
+        thueThuNhap =thuNhap*30/100-5.85;
+    }
+    else if(thuNhap>80){
+        thueThuNhap =thuNhap*35/100-9.85;
+    }
+    document.write('Thuế thu nhập bạn phải đóng là: '+thueThuNhap +' triệu đồng');
+</script>
+</body>
+</html>

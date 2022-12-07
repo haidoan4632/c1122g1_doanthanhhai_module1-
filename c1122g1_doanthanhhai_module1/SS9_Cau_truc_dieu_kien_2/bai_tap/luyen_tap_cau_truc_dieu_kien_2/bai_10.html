@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 10</title>
+</head>
+<body>
+<script>
+    let soDien = +prompt('Nhập vào số điện tiêu thụ hàng tháng');
+    let giaDien;
+    if (soDien >= 0) {
+        if (soDien >= 0 && soDien <= 50) {
+            giaDien = 1.678 * soDien;
+        } else if (soDien > 50 && soDien <= 100) {
+            giaDien = 1.678 * 50 + 1.734 * (soDien - 50);
+        } else if (soDien > 100 && soDien <= 200) {
+            giaDien = 1.678 * 50 + 1.734 * 50 + 2.014 * (soDien - 100);
+        } else if (soDien > 200 && soDien <= 300) {
+            giaDien = 1.678 * 50 + 1.734 * 50 + 2.014 * 100 + 2.536 * (soDien - 200);
+        } else if (soDien > 300 && soDien <= 400) {
+            giaDien = 1.678 * 50 + 1.734 * 50 + 2.014 * 100 + 2.536 * 100 + 2.834 * (soDien - 300);
+        } else if (soDien > 400) {
+            giaDien = 1.678 * 50 + 1.734 * 50 + 2.014 * 100 + 2.536 * 100 + 2.834 * 100 + 2.927 * (soDien - 400);
+        }
+        alert(giaDien);
+    } else {alert('Nhập lại số điện')};
+</script>
+</body>
+</html>

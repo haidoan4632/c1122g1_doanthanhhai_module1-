@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<h3>Xếp hạng học lực dựa trên điểm thi:</h3>
+<script>
+    let diemKiemTra = +prompt('nhập điểm thi');
+    let diemGiuaKy = +prompt('nhập điểm thi');
+    let diemCuoiKy = +prompt('nhập điểm thi');
+    let diemTongKet = (diemKiemTra * 2 + diemGiuaKy * 2 + diemCuoiKy * 6) / 10;
+    if (diemKiemTra >= 0 && diemGiuaKy >= 0 && diemCuoiKy >= 0 && diemKiemTra <= 10 && diemGiuaKy <= 10 && diemCuoiKy <= 0) {
+        if (diemTongKet >= 8) {
+            alert('Học đỉnh đó');
+        } else if (diemTongKet < 8 && diemTongKet >= 6.5) {
+            alert('Học vậy được rồi');
+        } else if (diemTongKet >= 4 && diemTongKet < 6.5) {
+            alert('Vui quá không nợ môn');
+        } else if (diemTongKet >= 0 && diemTongKet < 4) {
+            alert('Thôi về chăn bò cho rồi');
+        }
+    } else {
+        alert('nhập lại điểm hộ nha')
+    }
+    ;
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<p>Nhập vào tuổi 1 người:</p>
+<input type="number" id="old">
+<button onclick="testOld()">function_call</button>
+<script>
+
+    function testOld() {
+        let old = parseInt(document.getElementById('old').value);
+        if (old > 0 && old < 120) {
+            document.write('Đây là tuổi của 1 người');
+        } else {
+            document.write('Đây là thứ gì rồi')
+        }
+    }
+</script>
+</body>
+</html>

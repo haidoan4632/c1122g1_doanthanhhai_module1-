@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chỉ số cân nặng</title>
+</head>
+<body>
+<h3>Chỉ số BMI đối với người trên 20 tuổi được phân loại và diễn giải theo bảng sau: </h3>
+<lable> nhập chỉ số cân nặng của cơ thể: <input type="text" id="weight"></lable>
+<br>
+<lable>nhập chỉ số chiều cao của cơ thể: <input type="text" id="tall"></lable>
+<br>
+
+<button onclick="calculate()">submit</button>
+<p id="result">Interpretation: </p>
+<script>
+    function calculate() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("tall").value;
+        let BMI = weight / (height * height);
+        if (BMI < 18.5) {
+            document.getElementById("result").innerHTML = "Underweight";
+            console.log(BMI)
+        } else if (BMI >= 18.5 && BMI < 25) {
+            document.getElementById("result").innerHTML = "Normal";
+        } else if (BMI >= 25 && BMI < 30) {
+            document.getElementById("result").innerHTML = "Overweight";
+        } else if (BMI >= 30) {
+            document.getElementById("result").innerHTML = "Obese";
+        }
+
+    }
+</script>
+</body>
+</html>

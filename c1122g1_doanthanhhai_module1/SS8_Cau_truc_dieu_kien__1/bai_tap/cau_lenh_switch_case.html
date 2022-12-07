@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu lệnh switch case</title>
+</head>
+<body>
+<h3>Ứng dụng cho phép hiện số ngày trong tháng</h3>
+<input type="number" id="month" min="0" max="12">
+<button onclick="check_month()">Hiện số ngày</button>
+<br>
+<script>
+    function check_month() {
+        let month = +document.getElementById("month").value;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+                alert('Tháng ' + month + ' có 31 ngày');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert('Tháng ' + month + ' có 30 ngày');
+                break;
+            case 2:
+                alert('Tháng ' + month + ' có 28 or 29 ngày');
+                break;
+            default:
+                alert('nhập sai tháng cần nhập lại');
+                break;
+        }
+    }
+</script>
+</body>
+</html>

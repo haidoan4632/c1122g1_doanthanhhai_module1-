@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    let integer1 = +prompt('nhập số nguyên thứ nhất');
+    let integer2 = +prompt('nhập số nguyên thứ hai');
+    let integer3 = +prompt('nhập số nguyên thứ ba');
+    if (integer1 !== integer2 && integer1 !== integer3 && integer2!==integer3) {
+        if (integer1 > integer2 && integer1 > integer3) {
+            document.write('Số nguyên ' + integer1 + ': là số nguyên lớn nhất');
+        } else if (integer2 > integer1 && integer2 > integer3) {
+            document.write('Số nguyên ' + integer2 + ': là số nguyên lớn nhất');
+        } else if (integer3 > integer1 && integer3 > integer2) {
+            document.write('Số nguyên ' + integer3 + ': là số nguyên lớn nhất');
+        }
+    }
+else{ document.write('nhập 3 số nguyên khác nhau đi mấy bạn, please :(')}
+</script>
+</body>
+</html>
