@@ -9,18 +9,16 @@
     let a = +prompt('nhập giá trị');
     let b = +prompt('nhập giá trị');
     let c = +prompt('nhập giá trị');
-    let delta = (b*b) - (4*a*c);
+    let delta = (b * b) - (4 * a * c);
     let x1;
     let x2;
-    if(delta>0){
-        x1 = ((-b)+(Math.sqrt(delta)))/(2*a);
-        x2 = ((-b)-(Math.sqrt(delta)))/(2*a);
-        alert("x1 = " + x1 + ", x2 = " +x2 );
-    }
-    else if(delta===0){
-        x1=x2 = (-b)/(2*a);
-    }
-    else if(delta<0){
+    if (delta > 0) {
+        x1 = ((-b) + (Math.sqrt(delta))) / (2 * a);
+        x2 = ((-b) - (Math.sqrt(delta))) / (2 * a);
+        alert("x1 = " + x1 + ", x2 = " + x2);
+    } else if (delta === 0) {
+        x1 = x2 = (-b) / (2 * a);
+    } else if (delta < 0) {
         alert('phương trình đã cho vô nghiệm');
     }
 </script>
