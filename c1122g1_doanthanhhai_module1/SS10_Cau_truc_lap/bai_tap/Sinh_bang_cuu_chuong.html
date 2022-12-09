@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+</head>
+<body>
+<h3 style="color: blue; font-style: italic; font-weight: inherit ">Sinh bảng cửa chương</h3>
+<script>
+
+    let multiplicationTable = "<table border='2' width='300'cellpadding='10'cellspacing='3' >";
+    for (let i = 1; i <= 9; i++) {
+        multiplicationTable = multiplicationTable + "<tr>";
+        for (let j = 2; j <= 9; j++) {
+            multiplicationTable = multiplicationTable + "<td style='color: magenta ; font-weight: bold; background-color: blueviolet'>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+        multiplicationTable = multiplicationTable + "</tr>";
+    }
+    multiplicationTable = multiplicationTable + "</table>";
+    document.write(multiplicationTable);
+</script>
+</body>
+</html>
