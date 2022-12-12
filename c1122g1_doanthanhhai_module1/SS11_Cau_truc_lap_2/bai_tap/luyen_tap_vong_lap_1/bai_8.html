@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game đoán số</title>
+</head>
+<body>
+<button onclick="doanSo()">Chơi</button>
+
+<script>
+    function doanSo() {
+        let soLanBanMuonDoan = +prompt('nhập vào số lần bạn muốn đoán');
+        let min = +prompt('nhập vào giá trị min bạn muốn đoán');
+        let max = +prompt('nhập vào giá trị max bạn muốn đoán');
+        for (let i = 0; i < soLanBanMuonDoan; i++) {
+            let mayRui = +prompt('Để xem!');
+            let khoangDoanSo = Math.floor(Math.random() * max) + min;
+            if (min === max && khoangDoanSo === mayRui) {
+                alert('Chơi khôn vậy ai chơi!');
+                break;
+            } else if (min === max && khoangDoanSo !== mayRui) {
+                alert('Đam mê đoán trật hả bạn?');
+                break;
+            } else {
+                if (khoangDoanSo === mayRui) {
+                    alert("Hên à nha!");
+                    break;
+                } else {
+                    alert('Chia buồn, thử lại cho vui, đằng nào cũng trật');
+                }
+            }
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

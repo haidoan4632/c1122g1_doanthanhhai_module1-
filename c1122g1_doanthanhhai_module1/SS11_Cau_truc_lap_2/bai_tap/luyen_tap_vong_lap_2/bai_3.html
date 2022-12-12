@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+
+<p onclick="hinh1()">hình 1</p>
+<p onclick="hinh2()">hình 2</p>
+<p onclick="hinh3()">hình 3</p>
+<p onclick="hinh4()">hình 4</p>
+
+<script>
+    function hinh1() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    function hinh2() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 5; j >= i; j--) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    function hinh3() {
+        let i, j;
+        for (i = 1; i <= 5; i++) {
+            for (let j = 5; i <= j; j--) {
+                document.write('&ensp;');
+            }
+            for (j = 1; j <= i; j++) {
+
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    function hinh4() {
+        let i, j;
+        for (i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('&ensp;');
+            }
+            for (j = 5; j >= i; j--) {
+
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+</script>
+</body>
+</html>

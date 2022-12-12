@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> bài 4</title>
+</head>
+<body>
+<h3> In hình chữ nhật</h3>
+
+<script>
+    let widths = +prompt('nhập độ dài chiều rộng hình chữ nhật');
+    let height = +prompt('nhập độ dài cạnh hình chữ nhật');
+    for (let i = 1; i <= widths; i++) {
+        for (let j = 1; j <= height; j++) {
+
+            if (i === 1 || j === 1 || i === widths || j === height) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp;');
+            }
+
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

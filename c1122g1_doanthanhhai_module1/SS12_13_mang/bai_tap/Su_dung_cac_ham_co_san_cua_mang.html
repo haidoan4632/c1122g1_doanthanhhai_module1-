@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<button onclick="arr_1()">Nối tất cả các phần tử trong mảng</button>
+<button onclick="arr_2()">Nhận 1 số nhập vào và chèn dấu (-)</button>
+<button onclick="arr_3()">Chuyển chữ thường thành hoa</button>
+<script>
+
+    function arr_1() {
+        let arr1 = [];
+        let n = +prompt('nhấp số lượng phần tử trong mảng');
+        for (let i = 0; i < n; i++) {
+            arr1[i] = prompt('nhập phần tử thứ i trong mảng');
+        }
+        let chuoiArr1 = arr1.join(', ');
+        alert(chuoiArr1);
+    }
+
+    function arr_2() {
+        let chuoi = +prompt('nhập vào một số');
+        let chuoiarr2 = chuoi.toString();
+        let arr2 = chuoiarr2.split('');
+        console.log(arr2);
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr2[j] % 2 === 0 && arr2[j + 1] % 2 === 0) {
+                arr2.splice(j + 1, 0, "-");
+            }
+        }
+        let chuoi2 = arr2.join("");
+        alert(chuoi2);
+    }
+
+    function arr_3() {
+        let chuoi = prompt('nhập vào một chuỗi');
+        let chuoiarr3 = chuoi.toString();
+        alert(chuoiarr3.toUpperCase());
+    }
+
+</script>
+</body>
+</html>
+

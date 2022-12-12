@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<h4>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. <br>
+    Chương trình này đếm số ký tự số trong mảng. </h4>
+<script>
+    let arr = [];
+    let n = +prompt('nhập số phần tử trong mảng');
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập phần tử thứ i' + i + 'của mảng');
+    }
+    let chuoiArr = arr.join('');
+
+    document.write('mảng ký tự là: '+arr +'<br>');
+    document.write('kích thước mảng là: '+arr.length +'<br>');
+    document.write(chuoiArr.length);
+</script>
+</body>
+</html>

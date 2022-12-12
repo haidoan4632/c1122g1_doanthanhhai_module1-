@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất
+        trong mảng và vị trí của phần tử đó</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let dem = 0;
+    let max;
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt('nhập phần tử thứ i'));
+    }
+    console.log(arr);
+    for (let i = 0; i < 10; i++) {
+        for (let j = i + 1; j <= 10; j++) {
+            if (arr[i] === arr[j]) {
+                dem = dem + 1;
+            }
+        }
+        console.log(dem);
+    }
+    if (dem > 1) {
+        alert('Mảng số nguyên vừa nhập có một số phần tử giống nhau, cần nhập lại các số nguyên khác nhau');
+    } else if (dem === 0) {
+        for (let k = 0; k < 10; k++) {
+            max = arr[0];
+            if (arr[k] > arr[0]) {
+                max = arr[k];
+            }
+        }
+        alert('Phần tử có giá trị lớn nhất là: ' + max);
+        alert('Vị trí phần tử đó là: ' + arr.indexOf(max));
+    }
+</script>
+</body>
+</html>
