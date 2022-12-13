@@ -9,15 +9,20 @@
     Chương trình này đếm số ký tự số trong mảng. </h4>
 <script>
     let arr = [];
-    let n = +prompt('nhập số phần tử trong mảng');
-    for (let i = 0; i < n; i++) {
-        arr[i] = +prompt('nhập phần tử thứ i' + i + 'của mảng');
-    }
-    let chuoiArr = arr.join('');
+    let count = 0;
+    let arrLength = prompt('nhập số phần tử của mảng');
+    for (let i = 0; i < arrLength; i++) {
+        arr[i] = prompt('nhấp phần tử thứ i của mảng');
+if( arr[i] %1 ===0 ) {
+    count++;
+}
+        }
 
-    document.write('mảng ký tự là: '+arr +'<br>');
-    document.write('kích thước mảng là: '+arr.length +'<br>');
-    document.write(chuoiArr.length);
+
+    document.write(arr +'<br>');
+    document.write(arr.length +'<br>');
+   document.write(count)
+
 </script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+
+<form>
+    <input type="text" id="keyWord" placeholder="Nhập từ tiếng anh cần tra">
+    <button onclick="check()">Transelate</button>
+</form>
+<script>
+    let english = ['When', 'I', 'see', 'you', 'the first time', 'nothing', 'could', 'stop', 'me', 'from', 'loving you'];
+    let VietNam = ['Khi', 'anh', 'gặp', 'em', 'lần đầu', 'không còn gì', 'có thể', 'ngăn cản', 'bản thân anh', 'đến', 'yêu em'];
+
+    function check() {
+        let keyWord = document.getElementById("keyWord").value;
+        let indexWord = english.indexOf(keyWord);
+        document.write(VietNam[indexWord]);
+    }
+</script>
+</body>
+</html>
