@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nháp</title>
+</head>
+<body>
+<script>
+    let chuoi1 = "aabcc";
+    let chuoi2 = "adcaa";
+    let count = 0;
+    let arr1 = chuoi1.split("");
+    let arr2 = chuoi2.split("");
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                document.write('có '+ count + ' kí tự '+ arr1[i]+ ' ')
+                count = count + 1;
+                arr1.splice(i, 1);
+                arr2.splice(j, 1);
+            }
+        }
+    }
+ alert(count)
+
+</script>
+</body>
+</html>
