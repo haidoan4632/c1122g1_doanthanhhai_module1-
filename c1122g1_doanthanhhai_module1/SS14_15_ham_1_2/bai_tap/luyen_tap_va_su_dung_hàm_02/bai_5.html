@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<button onclick="minNe()">kiểm tra số bé nhất</button>
+<script>
+
+    let min;
+
+    function soNguyen(soNguyen1, soNguyen2, soNguyen3) {
+        if (soNguyen1 < soNguyen2 && soNguyen1 < soNguyen3) {
+            min = soNguyen1;
+            return hamTraVeGiaTriNhoNhat();
+        } else if (soNguyen2 < soNguyen1 && soNguyen2 < soNguyen3) {
+            min = soNguyen2;
+            return hamTraVeGiaTriNhoNhat();
+        } else if (soNguyen3 < soNguyen2 && soNguyen3 < soNguyen1) {
+            min = soNguyen3;
+            return hamTraVeGiaTriNhoNhat();
+        }
+    }
+
+    function minNe() {
+        soNguyen(+prompt('sothu1'), +prompt('sothu2'), +prompt('sothu3'));
+    }
+
+    function hamTraVeGiaTriNhoNhat() {
+        alert("giá trị nhỏ nhất trong 3 số là: " + min);
+    }
+
+
+</script>
+</body>
+</html>
