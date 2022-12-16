@@ -9,7 +9,9 @@
     let n = prompt('nhập chuỗi');
     let str = n.split("");
     for (let i = 0; i < str.length; i++) {
-
+        if (str[i] === " ") {
+            str.splice(i, 1);
+        }
     }
     document.write("số ký tự trong chuỗi là: " + str.length);
 </script>

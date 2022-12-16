@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class SinhVien {
+        constructor(hoTen, gioiTinh, MSSV, namSinh) {
+            this.hoTen = hoTen;
+            this.gioiTinh = gioiTinh;
+            this.namSinh = namSinh;
+            this.MSSV = MSSV;
+        }
+
+
+        hocBai() {
+            console.log('Đang học bài...');
+        }
+        diNgu() {
+            console.log('Đang ngủ...');
+        }
+        xemPhim() {
+            console.log('Đang xem phim...');
+        }
+
+    }
+    var sinhVien1 = new SinhVien("Doãn Thanh Hải","Nam","104160014","Nam");
+    var sinhVien2 = new SinhVien();
+    var sinhVien3 = new SinhVien();
+</script>
+</body>
+</html>

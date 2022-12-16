@@ -11,15 +11,17 @@
     let min;
 
     function soNguyen(soNguyen1, soNguyen2, soNguyen3) {
-        if (soNguyen1 < soNguyen2 && soNguyen1 < soNguyen3) {
+        if (soNguyen1 <= soNguyen2 && soNguyen1 <= soNguyen3) {
             min = soNguyen1;
             return hamTraVeGiaTriNhoNhat();
-        } else if (soNguyen2 < soNguyen1 && soNguyen2 < soNguyen3) {
+        } else if (soNguyen2 <= soNguyen1 && soNguyen2 <= soNguyen3) {
             min = soNguyen2;
             return hamTraVeGiaTriNhoNhat();
-        } else if (soNguyen3 < soNguyen2 && soNguyen3 < soNguyen1) {
+        } else if (soNguyen3 <= soNguyen2 && soNguyen3 <= soNguyen1) {
             min = soNguyen3;
             return hamTraVeGiaTriNhoNhat();
+        } else {
+            alert('Hình như bạn nhập sai');
         }
     }
 

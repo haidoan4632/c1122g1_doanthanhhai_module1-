@@ -8,18 +8,16 @@
 <script>
     function checkNumericCharacters(number) {
         if (number % 1 === 0) {
-            return alert('true');
+            return true;
         }
         {
-            return alert('false');
+            return false;
         }
     }
 
-    checkNumericCharacters(+prompt("nhập vào ký tự cần kiểm tra"));
-
+    let kiemTra = checkNumericCharacters(+prompt("nhập vào ký tự cần kiểm tra"));
+    alert(kiemTra);
 
 </script>
 </body>
 </html>
-
-<!--cần xem lại return true-->
