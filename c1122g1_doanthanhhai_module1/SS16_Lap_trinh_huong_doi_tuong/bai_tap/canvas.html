@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+Các bước sử dụng canvas:
+B1: tạo thẻ canvas
+B2: gọi hàm getContext("2d"): nhập chuỗi "2d" vào:
+getContext("2d") sở hữu nhiều hàm dành cho vẽ hình ảnh như hình hộp, tròn, chữ
+
+thuộc tính fillStyle được dùng để gán CSS
+
+vẽ hình chữ nhật:
+thuộc tính fillRect được dùng để vẽ hình chữ nhật(x,y,with,height)
+
+vẽ đường thẳng:
+moveTo(x,y): định điểm bắt đầu
+lineTo(x,y): định điểm kết thúc
+hàm stroke(): vẽ 1 đường thẳng
+
+Vẽ hình tròn:
+hàm arc():
+arc(x,y,r,start,stop)
+
+Viết 1 đoạn chữ:
+font: định dạng kiểu chữ cho đoạn văn bản
+fillText(text,x,y): viết chữ trên ô canvas
+strokeText(text,x,y): Viết chữ trên ô canvas nhưng không tô màu chữ
+
+Canvas_gradients
+createLinearGradient(x,y,x1,y1): Quét màu xuất phát từ 1 phía
+createRadialGradient(x,y,r,x1,y1,r1): Quét màu xuất phát từ tâm
+Hàm addColorStop() : quy định điểm dừng quét màu dọc theo điểm quét(gradient)
+
+Canvas hình ảnh:
+drawImage( iimage,x,y) để vẽ hình ảnh trên 1 ô canvas
+</body>
+</html>

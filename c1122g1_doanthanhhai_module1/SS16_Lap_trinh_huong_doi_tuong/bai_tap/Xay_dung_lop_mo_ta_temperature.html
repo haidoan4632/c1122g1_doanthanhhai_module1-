@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(Celsius) {
+            this.Celsius = Celsius;
+
+        }
+
+        fahrenheit() {
+            return ((this.Celsius) * 9 / 5 + 32);
+        }
+
+        kelvin() {
+            return (this.Celsius + 273.15);
+        }
+    }
+
+    let temperature = new Temperature(25);
+    let fahrenheit = temperature.fahrenheit();
+    let kelvin = temperature.kelvin();
+    document.write('Nhiệt độ fahrenheit ứng với 25 độ C là: ' + fahrenheit + ' độ F ' + '<br>');
+    document.write('Nhiệt độ kelvin ứng với 25 độ C là: ' + kelvin + ' độ K');
+
+</script>
+</body>
+</html>

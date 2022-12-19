@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript HTML5 Canvas Example</title>
+</head>
+<body onload="canvasExample()">
+<canvas style="background-color: greenyellow" width="500" height="500" id="canvasExample"></canvas>
+<script>
+    function canvasExample(){
+        //identify the Canvas element via the DOM
+        var canvas = document.getElementById("canvasExample");
+        //checking for Canvas browser compatibility
+        if(canvas.getContext){
+            //Use getContext to specify the rendering context
+            var context = canvas.getContext('2d');
+            //setting of color
+            context.fillStyle = "green";
+            //creating the rectangle
+            context.fillRect(50,50,150,150);
+            context.clearRect(75,75,100,50);
+            context.strokeRect(90,90,75,20);
+
+        }else{
+            //providing a fallback option
+            alert("Please a Canvas-Supporting Web Browser");
+        }
+    }
+</script>
+</body>
+</html>

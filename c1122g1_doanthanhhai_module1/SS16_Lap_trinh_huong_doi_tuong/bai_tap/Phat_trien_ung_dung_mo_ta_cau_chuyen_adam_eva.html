@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng mô tả câu chuyện adam và eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert("Đã ăn hết táo rồi");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === "female") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        eat(apple) {
+            apple.decreaseApple();
+            this.weight++;
+        }
+
+        say() {
+            if (this.isMale() === true) {
+                return "Chúng mình cùng ăn táo nha!";
+            } else {
+                return "Ok em yêu! Chúng mình chùng nhau ăn chung nhé!";
+            }
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName() {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+
+    let apple = new Apple();
+    document.write('Khối lượng quả táo là: ' + apple.weight + ' (đv)' + '<br>');
+    let eva = new Human("Eva", "female", 50);
+    document.write('Giới tính của Eva là: ' + eva.gender + '<br>');
+    let adam = new Human("Adam", "male", 70);
+    document.write('Giới tính của Adam là: ' + adam.gender + '<br>');
+    document.write('Nàng Eva nói với Adam rằng: ' + eva.say() + '<br>');
+    document.write('Chàng Adam thành thật đáp lời: ' + adam.say() + '<br><br>');
+    while (apple.weight > 0) {
+        adam.eat(apple);
+        document.write('Khối lượng táo sau khi bị Adam cắn là: ' + apple.weight + ' kg <br>');
+        document.write('Cân nặng của Adam sau khi ăn táo là: ' + adam.getWeight() + ' kg <br>');
+        eva.eat(apple);
+        document.write('Khối lượng táo sau khi bị Eva cắn là: ' + apple.weight + ' kg <br>');
+        document.write('Cân nặng của Eva sau khi ăn táo là: ' + eva.getWeight() + ' kg <br><br>');
+    }
+    apple.decreaseApple();
+</script>
+</body>
+</html>
