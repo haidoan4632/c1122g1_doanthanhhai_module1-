@@ -13,29 +13,33 @@
         }
 
         turnOn() {
-            this.status = "on";
+            this.status = true;
+            document.write("Đèn sáng, ");
         }
 
         turnOff() {
-            this.status = "off";
+            this.status = false;
+            document.write("Đèn tối, ");
         }
     }
 
 
     class SwitchButton {
-        constructor(status) {
+        constructor(status, lamp) {
             this.status = status;
-            this.lamp = null;
+            this.lamp = lamp;
         }
 
         switchOn() {
-            this.status = "on";
             this.lamp.turnOn();
+            this.status = true;
+            document.write("bật công tắc, ");
         };
 
         switchOff() {
-            this.status = "off";
             this.lamp.turnOff();
+            this.status = false;
+            document.write("công tắc chưa bật, ");
         };
 
         connect(lamp) {
@@ -43,16 +47,16 @@
         }
     }
 
-    let lamp = new Lamp("off");
-    let button = new SwitchButton("off");
+    let lamp = new Lamp(false);
+    let button = new SwitchButton(false, lamp);
     button.connect(lamp);
     for (let i = 0; i < 10; i++) {
         button.switchOn();
-        document.write( button.status + "<br>");
-        document.write( lamp.status + "<br>");
+        document.write(button.status + "<br>");
+        document.write(lamp.status + "<br>");
         button.switchOff();
-        document.write( button.status + "<br>");
-        document.write( lamp.status + "<br>");
+        document.write(button.status + "<br>");
+        document.write(lamp.status + "<br>");
     }
 </script>
 </body>
