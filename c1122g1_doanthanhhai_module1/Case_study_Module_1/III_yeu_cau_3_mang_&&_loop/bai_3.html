@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+    let fraction = [];
+    let max;
+    let number = +prompt("nhập vào số lượng số phấn số");
+    for (let i = 0; i < number; i++) {
+        numerators[i] = +prompt("nhập tử số");
+        denominators[i] = +prompt("nhập mẫu số");
+        fraction[i] = (numerators[i]) / (denominators[i]);
+        fraction.push(fraction[i]);
+        max = fraction[0];
+        if (fraction[i] > fraction[0]) {
+            max = fraction[i];
+            if (max = fraction[i]) {
+                document.write("chỉ số của phân số lớn nhất là: " + [i]);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<h4>Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và
+    bắt đầu mỗi từ phải in hoa. </h4>
+<button onclick="main()">Chuẩn hóa xâu ký tự</button>
+<script>
+    function main() {
+        standardized(prompt("nhập vào 1 xâu ký tự"));
+    }
+
+    function standardized(string) {
+
+        let string1 = string.toLowerCase();
+
+        let string2;
+        let arr2;
+        let arr3;
+        let arr4 = [];
+        let arr1 = string1.split("");
+        let string3;
+        let maxLength;
+        let maxString;
+        for (let i = 0; i <= arr1.length; i++) {
+            for (let j = 0; j <= arr1.length; j++) {
+                if (arr1[j] == " " && arr1[j + 1] == " ") {
+                    arr1.splice(j, 1);
+                }
+            }
+        }
+        arr2 = arr1;
+        string2 = arr2.join("");
+        arr3 = string2.split(" ");
+        for (let j = 0; j < arr3.length; j++) {
+            arr4.push(arr3[j][0].toUpperCase() + arr3[j].slice(1));
+        }
+        console.log(arr4);
+        string3 = arr4.join(" ");
+        document.write("Xâu kí tự sau khi được chuẩn hóa: " + string3 + '<br>');
+
+
+        for (let j = 0; j < arr4.length; j++) {
+            maxLength = arr4[0].length;
+            if (arr4[j].length > maxLength) {
+                maxLength = arr4[j].length;
+                maxString = arr4[j];
+
+            }
+        }
+        document.write("Từ dài nhất trong xâu là: " + maxString);
+        return result();
+
+    }
+
+
+    function result() {
+
+    }
+</script>
+</body>
+</html>

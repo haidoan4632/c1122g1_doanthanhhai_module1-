@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    let arr;
+    let number = prompt("nhập vào 1 số từ bàn phím");
+    arr = number.split("");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == 1) {
+            document.write("một ");
+        }
+        if (arr[i] == 2) {
+            document.write("hai ");
+        }
+        if (arr[i] == 3) {
+            document.write("ba ");
+        }
+        if (arr[i] == 4) {
+            document.write("bốn ");
+        }
+        if (arr[i] == 5) {
+            document.write("năm ");
+        }
+        if (arr[i] == 6) {
+            document.write("sáu ");
+        }
+        if (arr[i] == 7) {
+            document.write("bảy ");
+        }
+        if (arr[i] == 8) {
+            document.write("tám ");
+        }
+        if (arr[i] == 9) {
+            document.write("chín ");
+        }
+        if (arr[i] == 0) {
+            document.write("không ");
+        }
+    }
+</script>
+</body>
+</html>
+
+<!--cách 2:-->
+<!--let a =prompt('nhập 1 số từ bàn phím');-->
+<!--let b =['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];-->
+<!--for(let i=0;i<a.length;i++){-->
+<!--document.write(b[a[i]])-->
+
+<!--}-->
+
+<!--nhưng cách này khó hiểu dã man-->

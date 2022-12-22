@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h4>Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó</h4>
+
+<script>
+    let string1 = prompt("nhập vào xâu kí tự 1");
+    let arr1 = string1.split('');
+    console.log(arr1);
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = i + 1; j < arr1.length; j++) {
+            if (arr1[i] === arr1[j]) {
+                arr1.splice(i, 1);
+                i--;
+            }
+        }
+    }
+    document.write('Các ký tự đã xuất hiện trong xâu là: ' + arr1 + '<br>');
+    document.write('Số lần xuất hiện của các ký tự là: ' + arr1.length);
+
+</script>
+</body>
+</html>
