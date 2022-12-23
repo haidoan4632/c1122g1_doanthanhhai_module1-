@@ -18,7 +18,9 @@
                 arr[i][j] = +prompt('nhập giá trị cho mảng');
             }
         }
-        return arr;
+        let stringArray2Chieu = arr.join(",");
+        let array1Chieu = stringArray2Chieu.split(",");
+        return array1Chieu;
 
 
     }
@@ -27,7 +29,11 @@
 
 
     function checkSNT(number) {
-        if (number === 2) {
+        let count = 0;
+        if (number < 2) {
+            return false;
+        }
+        if (number == 2) {
             return true;
         } else if (number > 2) {
             for (let i = 2; i < number; i++) {
@@ -47,8 +53,8 @@
 
 
     function displaySNTinArray2() {
-        listOfPrime();
-
+        let demSoNguyenTo = listOfPrime();
+        document.write("Các số nguyên tố trong mảng 2 chiều là: " + demSoNguyenTo + ' Số lượng số nguyên tố là: ' + demSoNguyenTo.length);
     }
 
     // hàm chính
@@ -56,15 +62,20 @@
 
     function listOfPrime() {
         let arrayInput = intializeArray2();
-        let a;
-        document.write(arrayInput);
-        for (let j = 0; j < arrayInput; j++) {
-            a = checkSNT(arrayInput[j]);
+        let soNguyenTo = [];
+        console.log(arrayInput);
+        for (let k = 0; k < arrayInput.length; k++) {
+            let kiemTraSNT = checkSNT(arrayInput[k]);
+            console.log(kiemTraSNT);
+            if (kiemTraSNT == true) {
+                soNguyenTo.push(arrayInput[k]);
+            }
         }
-        console.log(a);
+        return soNguyenTo;
+
     }
 
-    //In ra các số nguyên tố trong mảng 2 chiều
+    //Trả về các số nguyên tố trong mảng 2 chiều
 
 </script>
 </body>
