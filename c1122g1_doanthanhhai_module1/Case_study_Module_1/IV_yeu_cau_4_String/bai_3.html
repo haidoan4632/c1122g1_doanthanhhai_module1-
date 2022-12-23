@@ -7,16 +7,27 @@
 <body>
 
 <script>
-    let c = [];
-    let s1 = ["a", "a", "b", "c", "c"];
-    let s2 = ["a", "d", "c", "a", "a"];
-    for (let i = 0; i < s1.length; i++) {
-        for (let j = 0; j < s2.length; j++) {
-            if (s1[i] === s2[j]) {
-                c.push(s1[j]);
+    let string1 = prompt("nhập chuỗi kí tự 1");
+    let arr1 = string1.split("");
+    let string2 = prompt("nhập chuỗi kí tự 2");
+    let arr2 = string2.split("");
+    console.log(arr2);
+    let arr3 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                arr3.push(arr2[j]);
+                arr2.splice(j, 1);
+                arr1.splice(i, 1);
+                j--;
+                i--;
             }
         }
     }
+    console.log('Số ký tự chung là: ' + arr3);
+    console.log('Số lượng ký tự chung là: ' + arr3.length);
+
 </script>
 </body>
 </html>
+

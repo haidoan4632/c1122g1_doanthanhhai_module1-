@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<button onclick="displaySNTinArray2()">checkSoNguyenTo</button>
+<script>
+
+    function intializeArray2() {
+        let m = +prompt('nhập m từ bàn phím');
+        let n = +prompt('nhập n từ bàn phím');
+        let arr = [];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt('nhập giá trị cho mảng');
+            }
+        }
+        return arr;
+
+
+    }
+
+    // khởi tạo mảng 2 chiều
+
+
+    function checkSNT(number) {
+        if (number === 2) {
+            return true;
+        } else if (number > 2) {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    count = count + 1;
+                }
+            }
+            if (count > 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+
+    //Kiểm tra số nguyên tố
+
+
+    function displaySNTinArray2() {
+        listOfPrime();
+
+    }
+
+    // hàm chính
+
+
+    function listOfPrime() {
+        let arrayInput = intializeArray2();
+        let a;
+        document.write(arrayInput);
+        for (let j = 0; j < arrayInput; j++) {
+            a = checkSNT(arrayInput[j]);
+        }
+        console.log(a);
+    }
+
+    //In ra các số nguyên tố trong mảng 2 chiều
+
+</script>
+</body>
+</html>
