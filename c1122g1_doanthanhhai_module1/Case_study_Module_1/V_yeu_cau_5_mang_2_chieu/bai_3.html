@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<button onclick="maxArray()">value max</button>
+<button onclick="minArray()">value min</button>
+<script>
+
+    function maxArray() {
+        let array = intializeArray2();
+        let newArray = array.sort(function (a, b) {
+            return b - a;
+            console.log(newArray);
+        });
+        document.write('giá trị lớn nhất trong mảng là: ' + newArray[0]);
+    }
+
+    function minArray() {
+        let array = intializeArray2();
+        let newArray = array.sort(function (a, b) {
+            return a - b;
+            console.log(newArray);
+        });
+        document.write('giá trị nhỏ nhất trong mảng là: ' + newArray[0]);
+
+    }
+
+    function intializeArray2() {
+        let m = +prompt('nhập m từ bàn phím');
+        let n = +prompt('nhập n từ bàn phím');
+        let arr = [];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt('nhập giá trị cho mảng');
+            }
+        }
+        let stringArray2Chieu = arr.join(",");
+        let array1Chieu = stringArray2Chieu.split(",");
+        return array1Chieu;
+
+    }
+</script>
+</body>
+</html>
